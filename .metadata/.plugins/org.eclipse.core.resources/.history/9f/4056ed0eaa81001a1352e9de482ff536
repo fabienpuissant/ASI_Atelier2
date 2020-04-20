@@ -1,0 +1,48 @@
+if(sessionStorage.getItem("Name") == null){
+	window.location.href = "/login.html";
+}
+
+$(document).ready(function() {
+    
+	var json = JSON.parse(sessionStorage.getItem("Name"));
+	
+	$("#userNameId").text(json.surname);
+	$('#money').text(json.money + "$");
+	
+	
+	$("#sellMarket").click(function(){
+		
+		$("#home").hide();
+		$("#sell").show()
+		
+		$.ajax({
+			  url:"/UserService/user/cards/" + json.id,
+			  type:"GET",
+			  async: false,
+			  success: function( data ){
+				  console.log(data);
+			  }
+			  
+		});
+	});
+		
+		$("#imgrow").append("<tr><td>" +
+                                "<img  class='ui avatar image' src='http://www.guinnessworldrecords.com/images/superlative/superheroes/GWR-Superheroes-SUPERMAN.svg'> <span>Superman </span>" +
+                            "</td>" +
+                            "<td>DC Comic</td>"+
+                            "<td>50</td>"+
+                            "<td>100</td>"+
+                            "<td>80</td>"+
+                            "<td>100</td>"+
+                            "<td>100$</td>"+
+                            "<td>"+
+                                "<div class='ui vertical animated button' tabindex='0'>"+
+                                    "<div class='hidden content'>Sell</div>"+
+                                    "<div class='visible content'>"+
+                                        "<i class='shop icon'></i>"+
+                                    "</div>"+
+                                "</div>"+
+                            "</td></tr>");
+
+	
+});

@@ -1,0 +1,43 @@
+package io.javabrains.cardmarket.controllers;
+
+import java.util.List;
+
+import javax.tools.JavaFileObject;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.databind.util.JSONPObject;
+
+import io.javabrains.cardmarket.models.UserEntity;
+
+@RestController
+public class UserRestController {
+	
+	@Autowired
+	private UserService userService;
+	
+	@RequestMapping("/users")
+	public List<UserEntity> getUsers(){
+		return userService.getAll();
+	}
+	
+	/*
+	@RequestMapping("UserService/addUser/{Name}/{Surname}/{Password}")
+	public boolean addUser(@PathVariable String Name, String Surname, String Password) {
+		UserEntity user = new UserEntity(Name, Surname, Password);
+		return userService.addUser(user);
+	}*/
+	
+	@RequestMapping(method=RequestMethod.POST, value="UserService/addUser")
+	public boolean addUser(@RequestBody String json) {
+		JSONArray jsonArray = new JSONArray(stringToParse);
+		UserEntity user = new User(json)
+		return userService.addUser(user);
+	}
+
+}

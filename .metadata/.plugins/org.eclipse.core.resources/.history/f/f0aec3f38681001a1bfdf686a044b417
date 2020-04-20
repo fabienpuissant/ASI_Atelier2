@@ -1,0 +1,6 @@
+package io.javabrains.cardmarket.controllers;
+
+
+public class CardRestController {
+
+}

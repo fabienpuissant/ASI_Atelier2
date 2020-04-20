@@ -1,0 +1,5 @@
+package io.javabrains.cardmarket.utils;
+
+public class Tools {
+
+}

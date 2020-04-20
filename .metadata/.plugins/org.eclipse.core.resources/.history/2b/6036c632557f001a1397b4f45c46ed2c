@@ -1,0 +1,31 @@
+package io.javabrains.cardmarket.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import io.javabrains.cardmarket.models.User;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	public User getUserByName(String Name) {
+		return userRepository.findByName(Name);
+	}
+	
+	public void addUser(User user) {
+		userRepository.save(user);
+	}
+	
+	public void updateUser(User user) {
+		userRepository.save(user);
+	}
+	
+	public void deleteUser(String id) {
+		userRepository.delete(Integer.valueOf(id));
+	}
+	
+
+}

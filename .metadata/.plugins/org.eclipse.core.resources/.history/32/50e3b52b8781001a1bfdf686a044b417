@@ -1,0 +1,30 @@
+package io.javabrains.cardmarket.controllers;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.javabrains.cardmarket.models.CardEntity;
+import io.javabrains.cardmarket.utils.Tools;
+
+@RestController
+public class CardRestController {
+	
+	@Autowired
+	private CardService cardService;
+	
+	@GetMapping("CardService/card/{id}")
+	public Optional<CardEntity> getcard(@PathVariable String id) {
+		return cardService.getCardById(id);
+	}
+
+
+}
+

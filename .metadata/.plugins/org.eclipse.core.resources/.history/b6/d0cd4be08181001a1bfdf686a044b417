@@ -1,0 +1,11 @@
+$(document).ready(function() {
+    
+	if(sessionStorage.getItem("Name") == null){
+		window.location.href = "/login.html";
+	}
+	
+	var json = JSON.parse(sessionStorage.getItem("Name"));
+	
+	$("#userNameId").text(json.Surname);
+	
+});

@@ -1,0 +1,21 @@
+//Valeurs par défaut de la carte à l'arrivée sur la page
+
+$(document).ready(function(){
+	
+
+$("#form").submit(function(event){
+	
+	event.preventDefault();
+	
+});
+	
+	
+});
+	
+
+
+
+
+
+
+

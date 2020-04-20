@@ -1,0 +1,61 @@
+//Valeurs par défaut de la carte à l'arrivée sur la page
+
+$(document).ready(function(){
+	
+$("#errorbanner").hide();
+
+$("#form").submit(function(event){
+	
+	$("#errorbanner").hide();
+	
+	event.preventDefault();
+	var error = "";
+	
+	var Name = $("#Name").val();
+	var Surname = $("#Surname").val();
+	var Password = $("#Password").val();
+	var RepeatPassword = $("#RepeatPassword").val()
+
+	//Si jamais le formulaire n'est pas compètement rempli
+	if(Name == "" || Surname == "" || Password == "" || RepeatPassword == ""){
+		error = "Please fully complete the form";
+	}
+	else if (Password != RepeatPassword){
+		error = "Passwords don't match";
+	}
+	else {
+		//Si le formulaire est complètement rempli, on peut faire un appel ajax vers le serveur afin qu'il ajoute l'utilisateur
+		
+		var json = {"name": Name, "surname": Surname, "password": Password};
+		alert(typeof(json));
+		$.ajax({
+		  url:"/UserService/addUser",
+		  type:"POST",
+		  data:JSON.stringify(json),
+		  contentType:"application/json; charset=utf-8",
+		  dataType:"json",
+		  success: function(){
+			  alert(data);
+		  }
+		})
+		
+	}
+	
+	if(error != ""){
+		$("#error").text(error);
+		$("#errorbanner").show();
+	}
+	
+	
+});
+	
+	
+});
+	
+
+
+
+
+
+
+

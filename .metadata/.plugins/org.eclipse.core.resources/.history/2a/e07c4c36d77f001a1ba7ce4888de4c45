@@ -1,0 +1,15 @@
+package io.javabrains.cardmarket.controllers;
+
+
+import org.springframework.data.repository.CrudRepository;
+
+
+import io.javabrains.cardmarket.models.UserEntity;
+
+public interface UserRepository extends CrudRepository<UserEntity, Integer>{
+	
+	public UserEntity findByName(String Name);
+
+	public UserEntity findById(String id);
+
+}

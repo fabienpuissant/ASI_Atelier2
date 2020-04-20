@@ -1,0 +1,30 @@
+package io.javabrains.cardmarket.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.javabrains.cardmarket.models.UserEntity;
+
+@RestController
+public class UserRestController {
+	
+	@Autowired
+	private UserService userService;
+	
+	
+	@RequestMapping("UserService/addUser/{Name}/{Surname}/{Password}")
+	public UserEntity addUser(@PathVariable String Name, String Surname, String Password) {
+		UserEntity user = new UserEntity(Name, Surname, Password);
+		return userService.addUser(user);
+	}
+	/*
+	@RequestMapping(method=RequestMethod.POST, value="UserService/addUser")
+	public boolean addUser(@RequestBody UserEntity user) {
+		return userService.addUser(user);
+	}*/
+
+}

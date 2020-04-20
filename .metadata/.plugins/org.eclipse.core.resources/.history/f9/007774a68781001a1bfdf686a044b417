@@ -1,0 +1,38 @@
+package io.javabrains.cardmarket.controllers;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import io.javabrains.cardmarket.models.CardEntity;
+
+@Service
+public class CardService {
+	
+	@Autowired
+	private CardRepository cardRepository;
+	
+	public CardEntity getCardByName(String Name) {
+		return cardRepository.findByName(Name);
+	}
+	
+	public Optional<CardEntity> getCardById(String id) {
+		return cardRepository.findById(Integer.parseInt(id));
+	}
+	
+	
+	public void addCard(CardEntity user) {
+		cardRepository.save(user);
+	}
+	
+	public void updateCard(CardEntity user) {
+		cardRepository.save(user);
+	}
+	
+	public void deleteCard(String id) {
+		cardRepository.delete(cardRepository.findById(id));
+	}
+	
+
+}

@@ -1,0 +1,12 @@
+if(sessionStorage.getItem("Name") == null){
+	window.location.href = "/login.html";
+}
+
+$(document).ready(function() {
+    
+	var json = JSON.parse(sessionStorage.getItem("Name"));
+	
+	$("#userNameId").text(json.surname);
+	$('#money').text(json.money + "$");
+	
+});
