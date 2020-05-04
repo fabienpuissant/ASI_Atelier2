@@ -21,7 +21,7 @@ Une fois l'application lancée, il faut se creer un compte utilisateur via la pa
 Une fois connecté, l'utilisateur est redirigé vers la page principale où il peut acheter ou vendre ses cartes.
 Nous avons ajouté une fonctionnalité qui permet de creer des cartes aléatoire contre de l'argent.
 Un soin particulié à été porté à l'expérience utilisateur notamment via l'utilisation de toast (messages popup informatifs) et 
-de a fluidité de l'application : rechargement de la carte selectionnée lorqu'on la vend ou achète sans rechargement de page.
+de la fluidité de l'application : rechargement de la carte selectionnée lorqu'on la vend ou achète sans rechargement de page.
 Toutes les fonctionnalités sont terminées et il manque simplement un systeme de lazy load des cartes afin que toutes les cartes 
 ne soient pas afficher d'un seul coup. En effet il faudrait les faire apparaître au fur et à mesure du scroll de la page.
 

@@ -1,5 +1,0 @@
-package io.javabrains.cardmarket;
-
-public class RestJpaPostgresSpringBoot {
-
-}

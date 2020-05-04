@@ -1,7 +1,0 @@
-#sell{
-	display: none;
-}
-
-#sellIcon{
-	 cursor: pointer;
-}
