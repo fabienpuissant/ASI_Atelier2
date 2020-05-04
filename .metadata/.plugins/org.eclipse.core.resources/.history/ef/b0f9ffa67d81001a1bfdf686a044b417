@@ -1,6 +1,0 @@
-$(document).ready(function() {
-    var params = window.location.search;
-
-
-    alert(params);
-});

@@ -1,0 +1,15 @@
+package io.javabrains.cardmarket.models;
+
+import java.util.List;
+
+public class CardFarctory {
+	
+	
+	
+	public CardFarctory() {
+		
+	}
+	
+	
+
+}

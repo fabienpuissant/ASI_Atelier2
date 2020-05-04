@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="displayCards"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="displayCards"/>
+			<item value="cardservice"/>
+			<item value="card"/>
+			<item value="UserService"/>
+			<item value="toast"/>
+			<item value="Buy"/>
+			<item value="Money"/>
+			<item value="update"/>
+			<item value="Xin"/>
+			<item value="Twi"/>
+			<item value="Miss"/>
+			<item value="Master"/>
+			<item value="Choga"/>
+			<item value="split"/>
+			<item value="name"/>
+		</list>
+		<list key="replacehistory">
+			<item value="names"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1324"/>
+		<item key="DIALOG_Y_ORIGIN" value="152"/>
+		<item key="DIALOG_WIDTH" value="284"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

@@ -1,0 +1,43 @@
+package io.javabrains.cardmarket.models;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class CardFactory {
+	
+	private List<String> names = new ArrayList<String>();
+
+	
+	public List<String> getnames() {
+		return names;
+	}
+
+
+	public void setnames(List<String> names) {
+		this.names = names;
+	}
+
+
+	public CardFactory() {
+		
+		this.names.add("Alistar");
+		this.names.add("Fiora");
+		this.names.add("Amumu");
+		
+        }
+		
+	
+	public CardEntity createCard() {
+		Random rand = new Random();
+		String name = this.names.get(rand.nextInt(this.names.size()));
+		String imgUrl = "/images/" + name + ".png";
+		String description = "";
+		int attack = rand.nextInt(100) + 30;
+		int defence = rand.nextInt(100) + 30;
+		return new CardEntity(name, imgUrl, description, attack, defence);
+		
+	}
+	
+}
+

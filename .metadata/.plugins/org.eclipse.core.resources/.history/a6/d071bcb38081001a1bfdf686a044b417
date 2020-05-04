@@ -1,4 +1,0 @@
-$(document).ready(function() {
-    
-	consolelog(document.sessionStarage["Name"]);
-});

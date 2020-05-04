@@ -1,0 +1,30 @@
+package io.javabrains.cardmarket.models;
+
+import java.io.File;
+import java.util.List;
+
+public class CardFactory {
+	
+	private List<String> name;
+
+	
+	public List<String> getName() {
+		return name;
+	}
+
+
+	public void setName(List<String> name) {
+		this.name = name;
+	}
+
+
+	public CardFactory() {
+		
+		name.add("Alistar");
+		name.add("Fiora");
+		name.add("Amumu");
+		
+        }
+		
+}
+
